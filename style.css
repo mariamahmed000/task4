@@ -1,0 +1,330 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --main: #8b71ff;
+}
+
+/* part1 */
+.nav{
+    width: 100%;
+    
+}
+.nav .nav-img{
+    float: left;
+    padding-left: 50px;
+    width: 40%;
+    margin-top: 20px;
+}
+
+.clear{
+    clear: both;
+}
+.nav .nav-img img{
+    margin: 0px 10px;
+}
+
+.nav .nav-list{
+    width: 60%;
+    margin-top: 30px;
+    float: right;
+}
+
+.nav .nav-list ul li{
+    list-style: none;
+    float: right;
+    padding: 0px 38px;
+}
+
+.nav .nav-list ul li a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.nav .nav-list ul li a::before{
+    content: "";
+    position: absolute;
+    background-color: lightsteelblue;
+    width: 40%;
+    height: 3px;
+    top: 100%;
+    left: 0;
+    transition: 1s;
+}
+
+.nav .nav-list ul li a:hover::before{
+      width: 100%;
+      height: 3px;
+      background-color: var(--main);
+}
+
+.nav .nav-list ul li button{
+    padding: 10px 28px;
+    background-color: white;
+    border: 2px solid var(--main);
+    border-radius: 10px;
+    margin: -7px;
+}
+
+.nav .nav-list ul li button:hover{
+    background-color: var(--main);
+    color: white;
+}
+
+/* part2 */
+.section{
+    width:100% ;
+    margin-top: 200px;
+
+} 
+
+.section .section-caption{
+    float: left;
+    width: 30%;
+    margin-left: 58px
+}
+
+.section .section-caption .section-header{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.section .section-caption .section-header span{
+    color: var(--main);
+}
+
+.section .section-caption .desc{
+    color: lightslategray;
+    padding: 5px;
+    font-size: 15px;
+    line-height: 28px;
+}
+
+.section .section-caption button,.ready button{
+    padding: 15px 28px;
+    background-color: var(--main);
+    border-radius: 7px;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.section .section-img{
+    width: 60%;
+    float: right;
+}
+
+.section .section-img img{
+    height: 500px;
+    float: right;
+}
+
+/* part3 ,part5 ,part7 */
+.intro , .news , .country,.ready{
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.intro p,
+.news p,
+ .country p{
+    margin: 20px 100px;
+    color: lightslategrey;
+}
+
+/* part4 */
+.cards, 
+.join .countries-det{
+    width: 100%;
+}
+.cards .card1 ,
+.join .card1 ,
+.countries-det .card1{
+    width: 30%;
+    float: left;
+}
+.cards .card1 .card ,
+.join .card1 .card ,
+.countries-det .card1 .card {
+    width: 60%;
+    height: 268px;
+    box-shadow: 3px 3px 29px -9px lightgrey;
+    border-radius: 9px;
+    margin: 87px 25px 23px 125px;
+    color: black;
+    padding: 10px;
+}
+.cards .card1 .bottom{
+    margin-left: 325px;
+}
+
+.cards .card1 .card .card-img ,
+.join .card1 .card .join-img,
+.countries-det .card1 .card .country-img{
+    width: 100%;
+}
+.cards .card1 .card .card-img .card-cricle{
+    border-radius: 50%;
+    width: 72px;
+    height: 56px;
+    margin: 20px 0px 23px 5px;
+    background-color: rgb(139, 113, 255);
+    transition: 2s;
+}
+
+.cards .card1 .card:hover .card-cricle{
+    transform: rotate(360deg);
+}
+
+.cards .card1 .card .card-img .red{
+    background-color: rgba(255, 0, 0,0.5);
+}
+
+.cards .card1 .card .card-img .green{
+    background-color: rgba(0, 128, 0,0.5);
+}
+.cards .card1 .card .card-content h3,
+.countries-det .card1 .card .country-content h3{
+     margin: 6px;
+}
+
+.cards .card1 .card .card-content p ,
+.countries-det .card1 .card .country-content p{
+    padding: 5px;
+    color: lightslategray;
+    font-size: 15px;
+}
+
+.cards .card1 .card .card-content .color{
+    color: #8b71ff;
+    margin-top: 5px;
+}
+
+/* part6 */
+.join ,.countries-det{
+    height: 80vh;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.join .card1 .card ,
+.countries-det .card1 .card{
+    width: 68%;
+    height: 293px;
+    padding: 0px;
+    transition: 1s;
+}
+
+.join .card1 .card:hover{
+    transform: scale(0.5,0.5);
+}
+
+.join .card1 .card .join-img img ,
+.countries-det .card1 .card .country-img img{
+    width: 100%;
+    height: 180px;
+}
+
+.join .card1 .card .join-content p,
+.countries-det .card1 .card .country-content p{
+    margin: 15px;
+}
+.join .card1 .card .join-content h3,
+.countries-det .card1 .card .country-content h3{
+    margin: 15px;
+    color: rgb(59, 59, 59);
+}
+
+.join .card1 .card .join-content p img{
+    width: 10px;
+    height: 10px;
+    margin-right: 7px;
+}
+
+.join button{
+    padding: 15px 28px;
+    color: white;
+    background-color: var(--main);
+    border-radius: 8px;
+    position: absolute;
+    bottom: 50px;
+    right: 50%;
+}
+
+/* part8 */
+.countries-det .card1 .card {
+     box-shadow:none ;
+}
+
+/* part9 */
+
+
+.ready .text{
+    width: 50%;
+    float: left;
+    margin-top: 10px;
+}
+
+.ready .apply{
+    width: 50%;
+    float: right;
+}
+
+.ready button{
+    margin-top: 0px;
+}
+
+/* part10 */
+.footer{
+    width: 100%;
+    height: 55vh;
+    background-color: var(--main);
+    color: white;
+    margin-top: 30px;
+}
+
+.footer .footer-left{
+    width: 30%;
+    float: left;
+    margin: 19px 20px 20px 24px;
+    padding: 72px;
+    line-height: 30px;
+}
+
+.footer .footer-left .footer-img{
+    margin-bottom: 10px;
+}
+
+.footer .footer-right{
+    width: 40%;
+    margin: 100px 285px 40px 50px;
+}
+
+.footer ul{
+    list-style: none;
+    padding-left: 0;
+    float: right;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer .footer-right .frist{
+    padding: 7px 30px;
+    line-height: 48px;
+    margin-right: 101px;
+}
+
+.footer .end{
+    margin-left: 85px;
+}
+
